@@ -8,13 +8,11 @@
   </head>
   <body>
     <div>
-      <button class="btn" data-clipboard-target="#foo">复制</button>
+      <button class="btn" data-clipboard-text="复制的内容test">复制</button>
     </div>
   </body>
   <script>
-    var clipboard = new ClipboardJS(".btn", {
-      text: "复制的内容test",
-    });
+    var clipboard = new ClipboardJS(".btn");
     clipboard.on("success", function (e) {
       console.log(e);
     });
