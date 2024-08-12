@@ -12,7 +12,9 @@
     </div>
   </body>
   <script>
-    var clipboard = new ClipboardJS(".btn");
+    var clipboard = new ClipboardJS(".btn", {
+      text: "复制的内容test",
+    });
     clipboard.on("success", function (e) {
       console.log(e);
     });
